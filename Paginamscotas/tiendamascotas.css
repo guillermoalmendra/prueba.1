@@ -1,0 +1,8 @@
+body{
+    background-color: rebeccapurple;
+    background-image: url("tiendamascotas.css");
+/*    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTW8A7Ylwz_5fyu13RJlv8r7Fs8dQGXzZ9DWkClX1y24j54zHcx-mQDbtKAOU3_xCaO-j0&usqp=CAU%22);
+*/    background-repeat: no-repeat;
+    background-size: cover;
+    height: auto;
+ }
