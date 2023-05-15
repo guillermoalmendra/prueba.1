@@ -17,6 +17,16 @@ $(function()
         if(letras.indexOf(caracter) < 0)
             return false;
     })
+    $('.txtTelefono').keypress(function(e)
+    {
+        // obtener el caracter presionado por el usuario
+        // obtener el caracter presionado por el usuario
+        let caracter = String.fromCharCode(e.which);
+        if(numeros.indexOf(caracter) < 0)
+            return false;
+    })
+
+
     $('.txtEmail').keypress(function(e)
     {
         let patron = letras + numeros + '@._-';
