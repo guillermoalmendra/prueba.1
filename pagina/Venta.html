@@ -21,16 +21,15 @@ body{
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"crossorigin="anonymous"></script>
-    <script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous">
-
-
-    </script>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
+    <script src="sesion.js"></script>
+</head>
 
 
 </head>
 
 <body>
-    
+
     <div class="container">
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <div class="container-fluid">
@@ -68,16 +67,17 @@ body{
                                 </li>
                                 <li><a class="dropdown-item" href="#"></li>
                             </ul>
-                            <li class="nav-item">
-                                <a class="nav-link active" aria-current="page" href="carrito.html">Carrito de compra</a>
-                              </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="carrito.html">Carrito de compra</a>
+                        </li>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link disabled"></a>
                         </li>
                     </ul>
                     <form class="d-flex" role="search">
-                        <input class="form-control me-2" type="search" placeholder="Buscar productos" aria-label="Search">
+                        <input class="form-control me-2" type="search" placeholder="Buscar productos"
+                            aria-label="Search">
                         <button class="btn btn-outline-success" type="submit">Buscar</button>
                     </form>
                 </div>
@@ -85,6 +85,7 @@ body{
         </nav>
     </div>
 
+<<<<<<< HEAD
     <div class="container">
         <h1 class="text-center">Venta</h1>
         <div class="row">
@@ -110,54 +111,114 @@ body{
                 <input type="text" class="form-control">
             </div>
                         
+=======
+    <h1 class="text-center">Registro administrador</h1>
+    <div class="row">
+        <div class="col-12 col-md-2 offset-md-3">Nombre </div>
+        <div class="col-12 col-md-5">
+            <input type="text" name="txtNombre"    class="form-control txtNombre"    maxlength="40"   placeholder="Ej: Juan">
+>>>>>>> ba5dc8cc6c1bec3e9a70d2bc4913409e4261d09a
         </div>
-        <div class="row">
-            <div class="col-12 col-md-2 offset-md-3">Fecha venta </div>
-            <div class="col-12 col-md-3">
-                <input type="date" class="form-control">
-            </div>
+        <div class="col-12 col-md-2 offset-md-3">Apellido </div>
+        <div class="col-12 col-md-5">
+            <input type="text" name="txtApellido"    class="form-control txtApellido"    maxlength="40"   placeholder="Ej: Almendra">
+        </div>
+        <div class="col-12 col-md-2 offset-md-3">Telefono </div>
+        <div class="col-12 col-md-5">
+
+
+            <input type="text" name="txtTelefono"    class="form-control txtTelefono"    maxlength="9"   placeholder="Ej: 123456789">
 
         </div>
 
+        <div class="col-12 col-md-2 offset-md-3">Email </div>
+        <div class="col-12 col-md-5">
+            <input type="text" name="txtEmail"    class="form-control txtEmail"    maxlength="20"   placeholder="Ej: @duocuc.cl">
+        </div>
 
-        <div class="row">
-            <div class="col-12 col-md-2 offset-md-3">tipo despacho </div>
-            <div class="col-12 col-md-5">
-                <select name="" id="" class="form-select">
-                    <option value="0">Seleccionar</option>
-                    <option value="1">Retiro en tienda</option>
-                    <option value="2">Starken</option>
-                    <option value="2">Chile express</option>
-                    <option value="2">Correos de Chile</option>
+        <div class="col-12 col-md-2 offset-md-3">Contraseña </div>
+        <div class="col-12 col-md-5">
+            <input type="password" name="txtContraseña"    class="form-control txtContraseña"    maxlength="8"   placeholder="Ej: 12345678">
+        </div>
+
+        <div class="col-12 col-md-2 offset-md-3">Confirme su contraseña </div>
+        <div class="col-12 col-md-5">
+            <input type="password" name="txtConfirmesucontraseña"    class="form-control txtConfirmesucontraseña"    maxlength="8"   placeholder="Ej: 12345678">
+        </div>
+        
+    </div>
+    <div class="row">
+        <div class="col-12 col-md-2 offset-md-3">Fecha </div>
+        <div class="col-12 col-md-3">
+            <input type="date" class="form-control">
+        </div>
+
+    </div>
 
 
-                    
-                </select>
-            </div>
-            <div class="col-12 col-md-2 offset-md-3">Método de pago (ya ingresados) </div>
-            <div class="col-12 col-md-5">
-                <select name="" id="" class="form-select">
-                    <option value="0" selected>Seleccionar</option>
-                    <option value="1">efectivo</option>
-                    <option value="2">Transferencia</option>
-                    <option value="3">mercado pago</option>
-                    <option value="4">Transbank</option>
-                    <option value="5">Fpay</option>
-                    <option value="6">Crédito</option>
-                    <option value="7">Debito</option>
+    <div class="row">
+        <div class="col-12 col-md-2 offset-md-3">Región </div>
+        <div class="col-12 col-md-5">
+            <select name="" id="" class="form-select">
+                <option value="0">Seleccionar</option>
+                <option value="1">Región Metropolitana</option>
+                <option value="2">Arica y Parinacota</option>
+                <option value="3">Tarapacá</option>
+                <option value="4">Antofagasta</option>
+                <option value="5">Atacama</option>
+                <option value="6">Coquimbo</option>
+                <option value="7">Valparaiso</option>
+                <option value="8">Libertador General Bernardo Ohiggins</option>
+                <option value="9">Maule</option>
+                <option value="10">Ñuble</option>
+                <option value="11">Bío-Bío</option>
+                <option value="12">Araucanía</option>
+                <option value="13">Ríos</option>
+                <option value="14">Lagos</option>
+                <option value="15">Aysén</option>
+                <option value="16">Magallanes</option>
 
-                </select>
-            </div>
-            <div class="row">
-                <div class="col-12 col-md-2 offset-md-3"> </div>
-                <div class="col-12 col-md-3"> 
-                    
-                    <button type="button" class="btn btn-dark">Vender</button>
-                </div>
-            </div>
+
+                
+            </select>
+        </div>
+        <div class="col-12 col-md-2 offset-md-3">Nivel de estudio </div>
+        <div class="col-12 col-md-5">
+            <select name="" id="" class="form-select">
+                <option value="0" selected>Seleccionar</option>
+                <option value="1">Básica</option>
+                <option value="2">media</option>
+                <option value="3">Técnico</option>
+                <option value="4">Profesional</option>
+                <option value="5">Magister</option>
+                <option value="6">Doctorado</option>
+                <option value="7">Ninguna</option>
+
+            </select>
+
             
         </div>
-       
+
+        <div class="col-12 col-md-2 offset-md-3">Seleccione tipo de cuenta </div>
+        <div class="col-12 col-md-5">
+            <select name="" id="" class="form-select">
+                <option value="0" selected>Seleccionar</option>
+                <option value="1">Administrador</option>
+                <option value="1">Usuario</option>
+                
+
+            </select>
+
+            
+        </div>
+        <div class="row mt-5">
+            <div class="col-12 col-md-2 offset-md-3"> </div>
+            <div class="col-12 col-md-3"> 
+                
+                <button type="button" class="btn btn-secondary btnRegistrar">Registrar</button>
+                <button type="button" class="btn btn-outline-secondary btnLimpiar">Limpiar</button>
+            </div>
+        </div>
 
 </body>
 
