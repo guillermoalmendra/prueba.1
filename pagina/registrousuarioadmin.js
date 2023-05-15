@@ -34,7 +34,7 @@ $(function()
 
     $('.btnLimpiar').click(function()
     {
-        $('.txtNombre, .txtApellido, .txtTelefono, .txtEmail, .txtContraseña, .txtConfirmesucontraseña  .').val('');
+        $('.txtNombre, .txtApellido, .txtTelefono, .txtEmail, .txtContraseña, .txtConfirmesucontraseña').val('');
         $('.txtRut').focus();
     });
 
