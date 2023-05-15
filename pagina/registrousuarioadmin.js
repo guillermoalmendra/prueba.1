@@ -54,14 +54,32 @@ $(function()
             alert("Debe especificar apellido");
             $('.txtApellido').focus();
         }
+        else  if(!$.trim($('.txtTelefono').val()))
+        {
+            alert("Debe especificar telefono");
+            $('.txtTelefono').focus();
+        }
+
         else  if(!emailRegex.test(($('.txtEmail').val())))
         {
             alert("El formato del correo no es válido");
             $('.txtEmail').focus();
         }
 
+        else  if(!$.trim($('.txtContraseña').val()))
+        {
+            alert("El formato del correo no es válido");
+            $('.txtContraseña').focus();
+        }
 
-        
+        else  if(!$.trim($('.txtConfirmesucontraseñ').val()))
+        {
+            alert("El formato del correo no es válido");
+            $('.txtConfirmesucontraseña').focus();
+        }
+
+
+
     })
 
      
