@@ -1,7 +1,15 @@
 $(function()
 {
     let numeros = '1234567890';
-    let letras  = 'qwertyuiopasdfghjklñzxcvbnmQWERTYUIOPASDFGHJKLÑZXCVBNM ';
+    let letras  = '1234567890';
+
+    $('.txtFolio').keypress(function(e)
+    {
+        let patron = letras + numeros;
+        let caracter = String.fromCharCode(e.which);
+        if(patron.indexOf(caracter) < 0)
+            return false;
+    })
     
     
     $('.txtNombre').keypress(function(e)
@@ -43,25 +51,8 @@ $(function()
        
 
     })
-    $('.numberFolio').keypress(function(e)
-    {
-        // obtener el caracter presionado por el usuario
-        let caracter = String.fromCharCode(e.which);
-        if(numeros.indexOf(caracter) < 0)
-            return false;
-    })
-
-
-
-    
-    $('.txtFolio').keypress(function(e)
-    {
-        // obtener el caracter presionado por el usuario
-        let numeros = Number.fromCharCode(e.which);
-        if(letras.indexOf(numeros) < 0)
-            return false;
-    })
-    
+ 
+ 
 
 
 });
