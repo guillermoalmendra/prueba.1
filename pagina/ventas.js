@@ -3,11 +3,12 @@ $(function()
     let numeros = '1234567890';
     let letras  = 'qwertyuiopasdfghjklñzxcvbnmQWERTYUIOPASDFGHJKLÑZXCVBNM ';
     
-    $('.txtRut').keypress(function(e)
+    $('.txtFoliodetalle').keypress(function(e)
     {
         // obtener el caracter presionado por el usuario
+        let patron = numeros;
         let caracter = String.fromCharCode(e.which);
-        if(numeros.indexOf(caracter) < 0)
+        if(patron.indexOf(caracter) < 0)
             return false;
     })
     $('.txtDv').keypress(function(e)
@@ -34,7 +35,7 @@ $(function()
 
     $('.btnLimpiar').click(function()
     {
-        $('.txtRut, .txtDv, .txtNombre, .txtEmail').val('');
+        $('.txtFoliodetalle, .txtDv, .txtNombre, .txtEmail').val('');
         $('.txtRut').focus();
     });
 
@@ -43,10 +44,10 @@ $(function()
 
     $('.btnAceptar').click(function()
     {
-        if(!$.trim($('.txtRut').val()))
+        if(!$.trim($('.txtFoliodetalle').val()))
         {
             alert("Debe especificar rut");
-            $('.txtRut').focus();
+            $('.txtFoliodetalle').focus();
         }
         else  if(!$.trim($('.txtDv').val()))
         {
@@ -76,23 +77,5 @@ $(function()
 
     })
 
-    function esValidoElRut(Rut,Digito)
-    {
-		let factor          = 2;
-		let sumaProducto    = 0;
-		let con             = 0;
-		let caracter     	= 0;
- 
-		for( con=Rut.length-1; con>=0; con--)
-		{
-			caracter = Rut.charAt(con);
-			sumaProducto += (factor * caracter);
-			if (++factor > 7)
-				factor=2;		
-		}
- 
-        let digitoCaracter= "-123456789K0".charAt(11-(sumaProducto % 11));
-        return digitoCaracter == Digito.toUpperCase();            
-    }    
-
+   
 });
