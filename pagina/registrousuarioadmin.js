@@ -28,7 +28,7 @@ $(function()
     $('.btnLimpiar').click(function()
     {
         $('.txtNombre, .txtApellido, .txtTelefono, .txtEmail, .txtContraseña, .txtConfirmesucontraseña').val('');
-        $('.txtRut').focus();
+        $('.txtNombre').focus();
     });
 
 
@@ -65,7 +65,7 @@ $(function()
             $('.txtContraseña').focus();
         }
 
-        else  if(!$.trim($('.txtConfirmesucontraseñ').val()))
+        else  if(!$.trim($('.txtConfirmesucontraseña').val()))
         {
             alert("El formato del correo no es válido");
             $('.txtConfirmesucontraseña').focus();
