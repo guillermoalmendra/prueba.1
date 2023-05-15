@@ -10,9 +10,9 @@ $(function()
         if(numeros.indexOf(caracter) < 0)
             return false;
     })
-    $('.txtDv').keypress(function(e)
+    $('.txtFoliodetalle').keypress(function(e)
     {
-        let patron = numeros + 'kK';
+        let patron = numeros;
         let caracter = String.fromCharCode(e.which);
         if(patron.indexOf(caracter) < 0)
             return false;
