@@ -3,18 +3,11 @@ $(function()
     let numeros = '1234567890';
     let letras  = 'qwertyuiopasdfghjklñzxcvbnmQWERTYUIOPASDFGHJKLÑZXCVBNM ';
     
-    $('.txtRut').keypress(function(e)
+    $('.txtApellido').keypress(function(e)
     {
         // obtener el caracter presionado por el usuario
         let caracter = String.fromCharCode(e.which);
-        if(numeros.indexOf(caracter) < 0)
-            return false;
-    })
-    $('.txtDv').keypress(function(e)
-    {
-        let patron = numeros + 'kK';
-        let caracter = String.fromCharCode(e.which);
-        if(patron.indexOf(caracter) < 0)
+        if(letras.indexOf(caracter) < 0)
             return false;
     })
     $('.txtNombre').keypress(function(e)
