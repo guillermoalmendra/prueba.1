@@ -3,18 +3,11 @@ $(function()
     let numeros = '1234567890';
     let letras  = 'qwertyuiopasdfghjklñzxcvbnmQWERTYUIOPASDFGHJKLÑZXCVBNM ';
     
-    $('.txtRut').keypress(function(e)
+    $('.txtApellido').keypress(function(e)
     {
         // obtener el caracter presionado por el usuario
         let caracter = String.fromCharCode(e.which);
-        if(numeros.indexOf(caracter) < 0)
-            return false;
-    })
-    $('.txtDv').keypress(function(e)
-    {
-        let patron = numeros + 'kK';
-        let caracter = String.fromCharCode(e.which);
-        if(patron.indexOf(caracter) < 0)
+        if(letras.indexOf(caracter) < 0)
             return false;
     })
     $('.txtNombre').keypress(function(e)
@@ -34,65 +27,54 @@ $(function()
 
     $('.btnLimpiar').click(function()
     {
-        $('.txtNombre, .txtApellido, .txtTelefono, .txtEmail, .txtContraseña, .txtConfirmesucontraseña  .').val('');
+        $('.txtNombre, .txtApellido, .txtTelefono, .txtEmail, .txtContraseña, .txtConfirmesucontraseña').val('');
         $('.txtRut').focus();
     });
 
 
     let emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.([a-zA-Z]{2,4})+$/
 
-    $('.btnAceptar').click(function()
+    $('.btnRegistrar').click(function()
     {
-        if(!$.trim($('.txtRut').val()))
-        {
-            alert("Debe especificar rut");
-            $('.txtRut').focus();
-        }
-        else  if(!$.trim($('.txtDv').val()))
-        {
-            alert("Debe especificar dv");
-            $('.txtDv').focus();
-        }
-        else  if(! esValidoElRut($('.txtRut').val(),$('.txtDv').val()))
-        {
-            alert("El rut no es válido");
-            $('.txtRut').focus();
-        }
-        else  if(!$.trim($('.txtNombre').val()))
+        
+        if(!$.trim($('.txtNombre').val()))
         {
             alert("Debe especificar nombre");
             $('.txtNombre').focus();
         }
-        else  if(!$.trim($('.txtEmail').val()))
+        else  if(!$.trim($('.txtApellido').val()))
         {
-            alert("Debe especificar email");
-            $('.txtEmail').focus();
+            alert("Debe especificar apellido");
+            $('.txtApellido').focus();
         }
+        else  if(!$.trim($('.txtTelefono').val()))
+        {
+            alert("Debe especificar telefono");
+            $('.txtTelefono').focus();
+        }
+
         else  if(!emailRegex.test(($('.txtEmail').val())))
         {
             alert("El formato del correo no es válido");
             $('.txtEmail').focus();
         }
 
+        else  if(!$.trim($('.txtContraseña').val()))
+        {
+            alert("El formato del correo no es válido");
+            $('.txtContraseña').focus();
+        }
+
+        else  if(!$.trim($('.txtConfirmesucontraseñ').val()))
+        {
+            alert("El formato del correo no es válido");
+            $('.txtConfirmesucontraseña').focus();
+        }
+
+
+
     })
 
-    function esValidoElRut(Rut,Digito)
-    {
-		let factor          = 2;
-		let sumaProducto    = 0;
-		let con             = 0;
-		let caracter     	= 0;
- 
-		for( con=Rut.length-1; con>=0; con--)
-		{
-			caracter = Rut.charAt(con);
-			sumaProducto += (factor * caracter);
-			if (++factor > 7)
-				factor=2;		
-		}
- 
-        let digitoCaracter= "-123456789K0".charAt(11-(sumaProducto % 11));
-        return digitoCaracter == Digito.toUpperCase();            
-    }    
+     
 
 });
