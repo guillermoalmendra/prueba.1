@@ -57,7 +57,7 @@ $(function()
     $('.txtFolio').keypress(function(e)
     {
         // obtener el caracter presionado por el usuario
-        let numeros = String.fromCharCode(e.which);
+        let numeros = Number.fromCharCode(e.which);
         if(letras.indexOf(numeros) < 0)
             return false;
     })
