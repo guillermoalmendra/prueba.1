@@ -2,6 +2,15 @@ $(function()
 {
     let numeros = '1234567890';
     let letras  = 'qwertyuiopasdfghjklñzxcvbnmQWERTYUIOPASDFGHJKLÑZXCVBNM ';
+
+
+    $(".txtFolio").keydown(function(event){
+        //alert(event.keyCode);
+        if((event.keyCode < 48 || event.keyCode > 57) && (event.keyCode < 96 || event.keyCode > 105) && event.keyCode !==190  && event.keyCode !==110 && event.keyCode !==8 && event.keyCode !==9  ){
+            return false;
+        }
+    });
+
     
     $('.txtApellido').keypress(function(e)
     {
@@ -17,14 +26,7 @@ $(function()
         if(letras.indexOf(caracter) < 0)
             return false;
     })
-    $('.txtFolio').keypress(function(e)
-    {
-        // obtener el caracter presionado por el usuario
-        // obtener el caracter presionado por el usuario
-        let caracter = String.fromCharCode(e.which);
-        if(numeros.indexOf(caracter) < 0)
-            return false;
-    })
+  
 
 
     $('.txtEmail').keypress(function(e)
