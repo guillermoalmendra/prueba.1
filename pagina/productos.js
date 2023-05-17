@@ -3,21 +3,21 @@ $(function()
         let numeros = '1234567890';
         let letras  = 'qwertyuiopasdfghjklñzxcvbnmQWERTYUIOPASDFGHJKLÑZXCVBNM ';
     
-        $('.txtNombre de producto').keypress(function(e)
+        $('.txtNombredeproducto').keypress(function(e)
         {
             // obtener el caracter presionado por el usuario
             let caracter = String.fromCharCode(e.which);
             if(letras.indexOf(caracter) < 0)
                 return false;
         })
-        $('.txtNombre').keypress(function(e)
+        $('.txtValorproducto').keypress(function(e)
         {
             // obtener el caracter presionado por el usuario
             let caracter = String.fromCharCode(e.which);
-            if(letras.indexOf(caracter) < 0)
+            if(numeros.indexOf(caracter) < 0)
                 return false;
         })
-        $('.txtTelefono').keypress(function(e)
+        $('.txtIDproducto').keypress(function(e)
         {
             // obtener el caracter presionado por el usuario
             // obtener el caracter presionado por el usuario
@@ -27,9 +27,9 @@ $(function()
         })
     
     
-        $('.txtEmail').keypress(function(e)
+        $('.txtID producto').keypress(function(e)
         {
-            let patron = letras + numeros + '@.-';
+            let patron = numeros ;
             let caracter = String.fromCharCode(e.which);
             if(patron.indexOf(caracter) < 0)
                 return false;
@@ -37,8 +37,8 @@ $(function()
     
         $('.btnLimpiar').click(function()
         {
-            $('.txtNombre, .txtApellido, .txtTelefono, .txtEmail').val('');
-            $('.txtNombre').focus();
+            $('.txtNombredeproducto, .txtIDproducto, .txtValorproducto, .txtCantidadproductoscomprados').val('');
+            $('.txtNombredeproducto').focus();
         });
     
     
