@@ -3,7 +3,7 @@ $(function()
         let numeros = '1234567890';
         let letras  = 'qwertyuiopasdfghjklñzxcvbnmQWERTYUIOPASDFGHJKLÑZXCVBNM ';
     
-        $('.txtApellido').keypress(function(e)
+        $('.txtNombre de producto').keypress(function(e)
         {
             // obtener el caracter presionado por el usuario
             let caracter = String.fromCharCode(e.which);
