@@ -13,21 +13,23 @@ $(function()
         $('.txtValorproducto').keypress(function(e)
         {
             // obtener el caracter presionado por el usuario
+            let patron = numeros + '$.';
             let caracter = String.fromCharCode(e.which);
-            if(numeros.indexOf(caracter) < 0)
+            if(patron.indexOf(caracter) < 0)
                 return false;
         })
         $('.txtIDproducto').keypress(function(e)
         {
             // obtener el caracter presionado por el usuario
             // obtener el caracter presionado por el usuario
+            
             let caracter = String.fromCharCode(e.which);
             if(numeros.indexOf(caracter) < 0)
                 return false;
         })
     
     
-        $('.txtID producto').keypress(function(e)
+        $('.txtCantidadproductoscomprados').keypress(function(e)
         {
             let patron = numeros ;
             let caracter = String.fromCharCode(e.which);
@@ -47,28 +49,27 @@ $(function()
         $('.btnRegistrar').click(function()
         {
     
-            if(!$.trim($('.txtNombre').val()))
+            if(!$.trim($('.txtNombredeproducto').val()))
             {
-                alert("Debe especificar nombre");
-                $('.txtNombre').focus();
+                alert("Debe especificar nombre de producto");
+                $('.txtNombredeproducto').focus();
             }
-            else  if(!$.trim($('.txtApellido').val()))
+            else  if(!$.trim($('.txtIDproducto').val()))
             {
-                alert("Debe especificar apellido");
-                $('.txtApellido').focus();
+                alert("Debe especificar el id del producto");
+                $('.txtIDproducto').focus();
             }
-            else  if(!$.trim($('.txtTelefono').val()))
+            else  if(!$.trim($('.txtValorproducto').val()))
             {
-                alert("Debe especificar telefono");
-                $('.txtTelefono').focus();
-            }
-    
-            else  if(!emailRegex.test(($('.txtEmail').val())))
-            {
-                alert("El formato del correo no es válido");
-                $('.txtEmail').focus();
+                alert("Debe especificar el valor del producto");
+                $('.txtValorproducto').focus();
             }
     
+            else  if(!$.trim($('.txtCantidadproductoscomprados').val()))
+            {
+                alert("Debe especificar la cantidad de productos");
+                $('.txtCantidadproductoscomprados').focus();
+            }
             
 
     
