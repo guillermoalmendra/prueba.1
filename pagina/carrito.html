@@ -26,7 +26,7 @@
           $(".btnVerIndicadores").click(function() {
               $.getJSON('https://mindicador.cl/api', 
               function(data) {
-                  $('.txtFecha').val(data.fecha.substring(0, 10));                  
+                                 
                   $('.txtDolar').val(data.dolar.valor);                   
               }).fail(function() {
                   console.log('Error al consumir la API!');
@@ -36,16 +36,7 @@
       // BUSCAR UN API QUE MUESTRE EL VALOR DE LA UF, DOLAR Y utm
   </script>
 </head>
-<body>
-  <div class="container"> 
-      <h1 class="text-center mt-5">Valores</h1>
-      <button class="btnVerIndicadores">Ver Indicadores</button><br>
-      <label for="txtFecha">Fecha</label>
-      <input type="date" name="txtFecha" class="txtFecha"><br>      
-      <label for="txtUF">Dolar</label>
-      <input type="text" name="txtDolar" class="txtDolar"><br>
-      
-  </div>
+
 </body>
 </html>
 
@@ -132,6 +123,7 @@
                       <p class="card-text"></p>
                       <p class="card-text">/</p>
                       <p class="card-text"></p>
+                      <a href="Venta.html" class="btn btn-success"> Ir a Comprar</a>
                       <a href="Venta.html" class="btn btn-success"> Ir a Comprar</a>
                     </div>
                   </div>
