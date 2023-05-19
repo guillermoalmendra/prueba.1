@@ -107,16 +107,16 @@ $(function()
 
     
         })
-        function esValidoElRut(Rut,Digito)
+        function esValidoElRut(Rutusuario,digitoCaracter)
         {
             let factor          = 2;
             let sumaProducto    = 0;
             let con             = 0;
             let caracter     	= 0;
      
-            for( con=Rut.length-1; con>=0; con--)
+            for( con=Rutusuario.length-1; con>=0; con--)
             {
-                caracter = Rut.charAt(con);
+                caracter = Rutusuario.charAt(con);
                 sumaProducto += (factor * caracter);
                 if (++factor > 7)
                     factor=2;		
