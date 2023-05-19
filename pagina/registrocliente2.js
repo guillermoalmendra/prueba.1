@@ -55,7 +55,7 @@ $(function()
         $('.btnLimpiar').click(function()
         {
             $('.txtNombre, .txtApellido, .txtTelefono, .txtEmail, .txtRutusuario, .txtDv').val('');
-            $('.txtNombre').focus();
+            $('.txtRutusuario').focus();
         });
     
     
