@@ -82,109 +82,69 @@ body{
     </div>
 
     <div class="container">
-        <h1 class="text-center">Registro administrador</h1>
+        <h1 class="text-center">Venta</h1>
         <div class="row">
-            <div class="col-12 col-md-2 offset-md-3">Nombre </div>
+            <div class="col-12 col-md-2 offset-md-3">Número Folio </div>
             <div class="col-12 col-md-5">
-                <input type="text" name="txtNombre"    class="form-control txtNombre"    maxlength="40"   placeholder="Ej: Juan">
+                <input type="text" name="txtNombre"    class="form-control txtFolio"    maxlength="40"   placeholder="Ej: 123456789">
             </div>
-            <div class="col-12 col-md-2 offset-md-3">Apellido </div>
-            <div class="col-12 col-md-5">
-                <input type="text" name="txtApellido"    class="form-control txtApellido"    maxlength="40"   placeholder="Ej: Almendra">
-            </div>
-            <div class="col-12 col-md-2 offset-md-3">Folio </div>
+                       
+            <div class="col-12 col-md-2 offset-md-3">Valor </div>
             <div class="col-12 col-md-5">
 
 
-                <input type="text" name="txtFolio"    class="form-control txtFolio"    maxlength="9"   placeholder="Ej: 123456789">
+                <input type="text" name="txtValor"    class="form-control txtValor"    maxlength="9"   placeholder="Ej: 123456789">
 
             </div>
 
-            <div class="col-12 col-md-2 offset-md-3">Email </div>
-            <div class="col-12 col-md-5">
-                <input type="text" name="txtEmail"    class="form-control txtEmail"    maxlength="20"   placeholder="Ej: @duocuc.cl">
-            </div>
-
-            <div class="col-12 col-md-2 offset-md-3">Contraseña </div>
-            <div class="col-12 col-md-5">
-                <input type="password" name="txtContraseña"    class="form-control txtContraseña"    maxlength="8"   placeholder="Ej: 12345678">
-            </div>
-
-            <div class="col-12 col-md-2 offset-md-3">Confirme su contraseña </div>
-            <div class="col-12 col-md-5">
-                <input type="password" name="txtConfirmesucontraseña"    class="form-control txtConfirmesucontraseña"    maxlength="8"   placeholder="Ej: 12345678">
-            </div>
-            
-        </div>
-        <div class="row">
-            <div class="col-12 col-md-2 offset-md-3">Fecha </div>
-            <div class="col-12 col-md-3">
-                <input type="date" class="form-control">
-            </div>
-
+           
         </div>
 
 
         <div class="row">
-            <div class="col-12 col-md-2 offset-md-3">Región </div>
+            <div class="col-12 col-md-2 offset-md-3">Despacho </div>
             <div class="col-12 col-md-5">
                 <select name="" id="" class="form-select">
                     <option value="0">Seleccionar</option>
-                    <option value="1">Región Metropolitana</option>
-                    <option value="2">Arica y Parinacota</option>
-                    <option value="3">Tarapacá</option>
-                    <option value="4">Antofagasta</option>
-                    <option value="5">Atacama</option>
-                    <option value="6">Coquimbo</option>
-                    <option value="7">Valparaiso</option>
-                    <option value="8">Libertador General Bernardo Ohiggins</option>
-                    <option value="9">Maule</option>
-                    <option value="10">Ñuble</option>
-                    <option value="11">Bío-Bío</option>
-                    <option value="12">Araucanía</option>
-                    <option value="13">Ríos</option>
-                    <option value="14">Lagos</option>
-                    <option value="15">Aysén</option>
-                    <option value="16">Magallanes</option>
+                    <option value="1">STarken</option>
+                    <option value="2">chilexpress</option>
+                    <option value="3">enviosya</option>
+                    <option value="4">didi</option>
+                    <option value="5">correos de chile</option>
+            
 
 
                     
                 </select>
+                
             </div>
-            <div class="col-12 col-md-2 offset-md-3">Nivel de estudio </div>
+            <div class="row">
+                <div class="col-12 col-md-2 offset-md-3">Fecha </div>
+                <div class="col-12 col-md-3">
+                    <input type="date" class="form-control">
+                </div>
+    
+            </div>
+          
+
+            <div class="col-12 col-md-2 offset-md-3">método de pago </div>
             <div class="col-12 col-md-5">
                 <select name="" id="" class="form-select">
                     <option value="0" selected>Seleccionar</option>
-                    <option value="1">Básica</option>
-                    <option value="2">media</option>
-                    <option value="3">Técnico</option>
-                    <option value="4">Profesional</option>
-                    <option value="5">Magister</option>
-                    <option value="6">Doctorado</option>
-                    <option value="7">Ninguna</option>
+                    <option value="1">debito</option>
+                    <option value="2">credito</option>
+                    <option value="3">efectivo</option>
 
                 </select>
 
                 
             </div>
-
-            <div class="col-12 col-md-2 offset-md-3">Seleccione tipo de cuenta </div>
-            <div class="col-12 col-md-5">
-                <select name="" id="" class="form-select">
-                    <option value="0" selected>Seleccionar</option>
-                    <option value="1">Administrador</option>
-                    <option value="1">Usuario</option>
-                    
-
-                </select>
-
-                
-            </div>
+            
             <div class="row mt-5">
                 <div class="col-12 col-md-2 offset-md-3"> </div>
                 <div class="col-12 col-md-3"> 
                     
-                    <button type="button" class="btn btn-secondary btnRegistrar">Registrar</button>
+                    <button type="button" class="btn btn-secondary btnRegistrar">Vender</button>
                     <button type="button" class="btn btn-outline-secondary btnLimpiar">Limpiar</button>
                 </div>
             </div>
