@@ -55,7 +55,7 @@ $(function()
         $('.btnLimpiar').click(function()
         {
             $('.txtNombre, .txtApellido, .txtTelefono, .txtEmail, .txtRutusuario, .txtDv').val('');
-            $('.txtNombre').focus();
+            $('.txtRutusuario').focus();
         });
     
     
@@ -73,10 +73,10 @@ $(function()
                 alert("Debe especificar dv");
                 $('.txtDv').focus();
             }
-            else  if(! esValidoElRut($('.txtRut').val(),$('.txtDv').val()))
+            else  if(! esValidoElRut($('.txtRutusuario').val(),$('.txtDv').val()))
             {
                 alert("El rut no es válido");
-                $('.txtRut').focus();
+                $('.txtRutusuario').focus();
             }
 
 
@@ -107,16 +107,16 @@ $(function()
 
     
         })
-        function esValidoElRut(Rut,Digito)
+        function esValidoElRut(Rutusuario,digitoCaracter)
         {
             let factor          = 2;
             let sumaProducto    = 0;
             let con             = 0;
             let caracter     	= 0;
      
-            for( con=Rut.length-1; con>=0; con--)
+            for( con=Rutusuario.length-1; con>=0; con--)
             {
-                caracter = Rut.charAt(con);
+                caracter = Rutusuario.charAt(con);
                 sumaProducto += (factor * caracter);
                 if (++factor > 7)
                     factor=2;		
