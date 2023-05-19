@@ -3,10 +3,10 @@ $(function()
         let numeros = '1234567890';
         let letras  = 'qwertyuiopasdfghjklñzxcvbnmQWERTYUIOPASDFGHJKLÑZXCVBNM ';
 
-        $('.txtRutusuario').keypress(function(e)
+        $('.txtRut').keypress(function(e)
     {
         // obtener el caracter presionado por el usuario
-        let patron = numeros + '-';
+        let patron = numeros;
         let caracter = String.fromCharCode(e.which);
         if(patron.indexOf(caracter) < 0)
             return false;
@@ -54,8 +54,8 @@ $(function()
     
         $('.btnLimpiar').click(function()
         {
-            $('.txtNombre, .txtApellido, .txtTelefono, .txtEmail, .txtRutusuario, .txtDv').val('');
-            $('.txtRutusuario').focus();
+            $('.txtNombre, .txtApellido, .txtTelefono, .txtEmail, .txtRut, .txtDv').val('');
+            $('.txtRut').focus();
         });
     
     
@@ -63,20 +63,20 @@ $(function()
     
         $('.btnRegistrar').click(function()
         {
-            if(!$.trim($('.txtRutusuario').val()))
+            if(!$.trim($('.txtRut').val()))
             {
                 alert("Debe especificar rut");
-                $('.txtRutusuario').focus();
+                $('.txtRut').focus();
             }
             else  if(!$.trim($('.txtDv').val()))
             {
                 alert("Debe especificar dv");
                 $('.txtDv').focus();
             }
-            else  if(! esValidoElRut($('.txtRutusuario').val(),$('.txtDv').val()))
+            else  if(! esValidoElRut($('.txtRut').val(),$('.txtDv').val()))
             {
                 alert("El rut no es válido");
-                $('.txtRutusuario').focus();
+                $('.txtRut').focus();
             }
 
 
@@ -107,16 +107,16 @@ $(function()
 
     
         })
-        function esValidoElRut(Rutusuario,digitoCaracter)
+        function esValidoElRut(Rut,Digito)
         {
             let factor          = 2;
             let sumaProducto    = 0;
             let con             = 0;
             let caracter     	= 0;
      
-            for( con=Rutusuario.length-1; con>=0; con--)
+            for( con=Rut.length-1; con>=0; con--)
             {
-                caracter = Rutusuario.charAt(con);
+                caracter = Rut.charAt(con);
                 sumaProducto += (factor * caracter);
                 if (++factor > 7)
                     factor=2;		
