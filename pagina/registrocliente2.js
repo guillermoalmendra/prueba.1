@@ -73,10 +73,10 @@ $(function()
                 alert("Debe especificar dv");
                 $('.txtDv').focus();
             }
-            else  if(! esValidoElRut($('.txtRut').val(),$('.txtDv').val()))
+            else  if(! esValidoElRut($('.txtRutusuario').val(),$('.txtDv').val()))
             {
                 alert("El rut no es válido");
-                $('.txtRut').focus();
+                $('.txtRutusuario').focus();
             }
 
 
