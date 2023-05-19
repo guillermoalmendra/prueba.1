@@ -27,12 +27,19 @@
               $.getJSON('https://mindicador.cl/api', 
               function(data) {
                                  
-                  $('.txtDolar').val(data.dolar.valor);                   
+                  $('.txtDolar').val(data.dolar.valor);
+                     
               }).fail(function() {
                   console.log('Error al consumir la API!');
               });
           });
+          
       });
+ 
+
+
+
+      
       // BUSCAR UN API QUE MUESTRE EL VALOR DE LA UF, DOLAR Y utm
   </script>
 </head>
@@ -40,7 +47,7 @@
 </body>
 </html>
 
--CODIGO DOLARES-
+
 </head>
 <body>
     <div class="container">
@@ -119,12 +126,18 @@
                       <h5 class="card-title"> Su compra</h5>
                       <p class="card-text">Master Dog</p>
                       <p class="card-text">15 kg</p>
-                      <p class="card-text">CLP 20000</p>
+                      <label for="txtUF">Dolar</label>
+                      <input type="text" name="txtDolar" class="txtDolar"><br>
+             
+                     
+                    </div>
                       <p class="card-text"></p>
                       <p class="card-text">/</p>
                       <p class="card-text"></p>
-                      <a href="Venta.html" class="btn btn-success"> Ir a Comprar</a>
-                      <a href="Venta.html" class="btn btn-success"> Ir a Comprar</a>
+                      <a type="button"  class="btn btn-success">  Comprar</a>
+                      <a type="button"  class="btn btn-success btnVerIndicadores"> Cambiar Divisa</a>
+                  
+                     
                     </div>
                   </div>
             </div>
